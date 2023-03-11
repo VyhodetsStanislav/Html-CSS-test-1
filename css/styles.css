@@ -16,6 +16,7 @@ font-family: 'Montserrat', sans-serif; */
   --title-text-color: #000000;
   --accent-color: #18a0fb;
   --primary-bg-color: #ffffff;
+  --seconderi-bg-color: #F5F5F5 ;
 }
 body {
   background-color: var(--primary-bg-color);
@@ -30,7 +31,19 @@ ul {
   list-style: none;
 }
 .list {
+  padding: 0;
+  margin: 0;
   text-decoration: none;
+}
+/* стандартный клас для разметки блоков */
+.container {
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1440px;
+  outline: 2px solid tomato;
 }
 /* Логотип */
 .logo {
@@ -43,6 +56,10 @@ ul {
 }
 .logo:hover {
   color: var(--accent-color);
+}
+/* page header */
+.page-header{
+  background-color: #ccc;
 }
 /* Явно унаследует font-family: inherit; */
 /* button {
@@ -64,7 +81,13 @@ ul {
   color: var(--title-text-color);
 }
 /* hero */
+.hero {
+  text-align: center;
+}
 .hero-title {
+  /* outline: 2px solid tomato; */
+  margin-top: 0;
+  margin-bottom: 74px;
   color: var(--title-text-color);
   font-weight: 400;
   font-size: 56px;
@@ -73,39 +96,68 @@ ul {
 }
 
 /* section секции */
+.section{
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+}
+.section.no-pading{
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .section-title {
+  margin-top: 0;
+  margin-bottom: 60px;
   color: var(--title-text-color);
   font-weight: 400;
   font-size: 48px;
   line-height: 1.5;
-  text-align: center;
+  
+}
+.section-title.centered {
+text-align: center;
 }
 .section-description {
+  margin-top: 0;
+  margin-bottom: 80px;
   font-weight: 400;
   font-size: 36px;
   line-height: 1.39;
 }
-
+/* приемущество */
 /* Features */
 .feature-list .title,
 .work-list .title {
+  margin-top: 0;
+  margin-bottom: 24px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
+}
+.feature-list p {
+margin-top: 0;
+margin-bottom: 32px;
 }
 .feature-list .text {
 }
-/*  work-list       Examples */
-/* .work-list .title {
+/*  work     Examples */
+.work-list .title {
   color: var(--title-text-color);
 
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
-} */
+}
+.work-list > .item{
+  padding-top: 80px;
+  padding-bottom: 80px ;
+}
+.work-list>.item:nth-child(2n){
+  background-color: var(--seconderi-bg-color);
+}
 
-/* Button */
+
 .footer-list a {
   text-decoration: none;
 }
@@ -119,19 +171,30 @@ ul {
   font-size: 15px;
   line-height: 1.6;
 }
+/* Button */
 .button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 11px 33px;
+  min-width: 130px;
+  text-align: center;
   color: var(--title-text-color);
   background-color: var(--primary-bg-color);
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
   text-decoration: none;
+  border: 1px solid transparent;
 }
+/* border: 1px solid transparent; transparent - прозрачній */
 .button.primeri {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+  
 }
+
 .button.secondary {
   color: var(--accent-color);
   background-color: var(--primary-bg-color);
+  border-color: var(--accent-color);
 }
